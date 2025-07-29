@@ -14,7 +14,6 @@
   <title>SantaBarbaraHomeHub.com — Real Estate Deals in Santa Barbara, CA</title>
 
   <style>
-    /* Box sizing */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -22,11 +21,11 @@
     html, body {
       margin: 0;
       padding: 0;
-      overflow-x: hidden; /* prevent horizontal scroll */
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #fff8f0;
       color: #4b3b2b;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     header {
@@ -40,7 +39,6 @@
       margin: 0;
       font-size: 3em;
       font-weight: 700;
-      max-width: 100%;
       word-break: break-word;
       overflow-wrap: break-word;
     }
@@ -65,17 +63,25 @@
       font-weight: 700;
       margin-bottom: 20px;
 
-      max-width: 100%;
-      word-break: normal;
+      white-space: normal;
       overflow-wrap: normal;
+      word-break: normal;
       hyphens: none;
+
+      /* allow container to be flexible */
+      display: block;
+      max-width: 100%;
     }
 
-    /* Prevent breaking inside domain text */
     .domain-text {
-      white-space: nowrap; /* NO breaks inside domain */
-      font-weight: 700;
+      white-space: nowrap;       /* NO breaking inside domain */
+      overflow: hidden;          /* clip overflow */
+      text-overflow: ellipsis;   /* add ... if clipped */
+      display: inline-block;
+      max-width: 100%;
+      vertical-align: bottom;
       color: #7b3e07;
+      font-weight: 700;
     }
 
     .highlight-box {
@@ -93,22 +99,6 @@
     .highlight-box ul li {
       margin-bottom: 12px;
       font-size: 1.1em;
-    }
-
-    .cta-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 28px;
-      background-color: #a3530e;
-      color: #fff;
-      font-weight: 700;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #7b3e07;
     }
 
     .contact-info p,
@@ -220,14 +210,4 @@
       <li><a href="http://IrvinePropertiesAI.com" target="_blank" rel="noopener noreferrer">IrvinePropertiesAI.com</a></li>
       <li><a href="http://PasadenaHomeDeals.com" target="_blank" rel="noopener noreferrer">PasadenaHomeDeals.com</a></li>
       <li><a href="http://LisbonHomeHub.com" target="_blank" rel="noopener noreferrer">LisbonHomeHub.com</a></li>
-      <li><a href="http://CapeTownHomeHub.com" target="_blank" rel="noopener noreferrer">CapeTownHomeHub.com</a></li>
-      <li><a href="http://Princetontexashomes.com" target="_blank" rel="noopener noreferrer">Princetontexashomes.com</a></li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Santa Barbara Home Hub. All Rights Reserved.</p>
-    <p>Site by <a href="mailto:Carlos.h2727@gmail.com">Carlos</a></p>
-  </footer>
-</body>
-</html>
+      <li><a href="http://CapeTownHomeHub.com
