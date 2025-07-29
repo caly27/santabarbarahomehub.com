@@ -19,14 +19,14 @@
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
       margin: 0;
       padding: 0;
+      overflow-x: hidden; /* Prevent horizontal scroll */
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #fff8f0;
       color: #4b3b2b;
       line-height: 1.6;
-      overflow-x: hidden; /* Prevent horizontal scroll */
     }
 
     header {
@@ -40,6 +40,9 @@
       margin: 0;
       font-size: 3em;
       font-weight: 700;
+      max-width: 100%;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
 
     header p {
@@ -51,7 +54,8 @@
     section {
       max-width: 1000px;
       margin: 30px auto;
-      padding: 0 20px; /* Side padding to avoid content touching edges */
+      padding: 0 20px;
+      width: 100%;
     }
 
     .section-title {
@@ -65,11 +69,14 @@
       overflow-wrap: break-word;
       word-break: break-word;
       max-width: 100%;
+      hyphens: auto;
+      box-sizing: border-box;
     }
 
     /* Prevent breaking inside the domain */
     .nowrap {
       white-space: nowrap;
+      display: inline-block;
     }
 
     .highlight-box {
@@ -125,6 +132,8 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 1.1em;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
 
     .other-sites a:hover {
@@ -151,6 +160,7 @@
       text-decoration: underline;
     }
 
+    /* Responsive tweaks */
     @media (max-width: 600px) {
       header h1 {
         font-size: 2em;
