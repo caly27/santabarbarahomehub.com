@@ -62,26 +62,25 @@
       text-align: center;
       font-weight: 700;
       margin-bottom: 20px;
-
       white-space: normal;
       overflow-wrap: normal;
       word-break: normal;
       hyphens: none;
-
-      /* allow container to be flexible */
       display: block;
       max-width: 100%;
     }
 
     .domain-text {
-      white-space: nowrap;       /* NO breaking inside domain */
-      overflow: hidden;          /* clip overflow */
-      text-overflow: ellipsis;   /* add ... if clipped */
+      white-space: nowrap;       /* no line breaks inside domain */
+      overflow-wrap: normal;
+      word-break: keep-all;
+      hyphens: none;
       display: inline-block;
       max-width: 100%;
       vertical-align: bottom;
       color: #7b3e07;
       font-weight: 700;
+      font-size: 1.6em; /* smaller font size to fit */
     }
 
     .highlight-box {
@@ -150,7 +149,6 @@
       text-decoration: underline;
     }
 
-    /* Responsive tweaks */
     @media (max-width: 600px) {
       header h1 {
         font-size: 2em;
@@ -158,6 +156,10 @@
 
       .section-title {
         font-size: 1.5em;
+      }
+
+      .domain-text {
+        font-size: 1.3em;
       }
 
       .highlight-box {
@@ -210,4 +212,14 @@
       <li><a href="http://IrvinePropertiesAI.com" target="_blank" rel="noopener noreferrer">IrvinePropertiesAI.com</a></li>
       <li><a href="http://PasadenaHomeDeals.com" target="_blank" rel="noopener noreferrer">PasadenaHomeDeals.com</a></li>
       <li><a href="http://LisbonHomeHub.com" target="_blank" rel="noopener noreferrer">LisbonHomeHub.com</a></li>
-      <li><a href="http://CapeTownHomeHub.com
+      <li><a href="http://CapeTownHomeHub.com" target="_blank" rel="noopener noreferrer">CapeTownHomeHub.com</a></li>
+      <li><a href="http://Princetontexashomes.com" target="_blank" rel="noopener noreferrer">Princetontexashomes.com</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Santa Barbara Home Hub. All Rights Reserved.</p>
+    <p>Built by <a href="mailto:Carlos.h2727@gmail.com">Carlos</a></p>
+  </footer>
+</body>
+</html>
