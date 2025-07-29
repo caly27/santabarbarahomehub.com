@@ -14,7 +14,6 @@
   <title>SantaBarbaraHomeHub.com — Real Estate Deals in Santa Barbara, CA</title>
 
   <style>
-    /* Reset box-sizing for easier padding management */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -26,7 +25,7 @@
       padding: 0;
       color: #4b3b2b;
       line-height: 1.6;
-      overflow-x: hidden; /* prevent horizontal scroll */
+      overflow-x: hidden;
     }
 
     header {
@@ -66,6 +65,11 @@
       max-width: 100%;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    /* Prevent breaking inside the domain */
+    .nowrap {
+      white-space: nowrap;
     }
 
     .highlight-box {
@@ -147,7 +151,6 @@
       text-decoration: underline;
     }
 
-    /* Responsive tweaks */
     @media (max-width: 600px) {
       header h1 {
         font-size: 2em;
@@ -172,7 +175,9 @@
   </header>
 
   <section>
-    <h2 class="section-title">Why Choose SantaBarbaraHomeHub.com?</h2>
+    <h2 class="section-title">
+      Why Choose <span class="nowrap">SantaBarbaraHomeHub.com</span>?
+    </h2>
     <div class="highlight-box">
       <p><strong>SantaBarbaraHomeHub.com</strong> connects buyers, renters, and investors with premier real estate deals in Santa Barbara. This SEO-optimized domain and platform help you reach the local market with ease and authority.</p>
       <ul>
