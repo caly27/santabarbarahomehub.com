@@ -43,7 +43,6 @@
       max-width: 100%;
       word-break: break-word;
       overflow-wrap: break-word;
-      /* no hyphens here to avoid weird breaks */
     }
 
     header p {
@@ -67,18 +66,14 @@
       margin-bottom: 20px;
 
       max-width: 100%;
-      word-break: break-word;
-      overflow-wrap: break-word;
-      /* remove hyphens */
+      word-break: normal;
+      overflow-wrap: normal;
       hyphens: none;
     }
 
-    /* Special styling for domain text inside the section title */
+    /* Prevent breaking inside domain text */
     .domain-text {
-      white-space: normal; /* allow wrapping */
-      word-break: break-word;
-      overflow-wrap: break-word;
-      hyphens: none; /* prevent hyphenation */
+      white-space: nowrap; /* NO breaks inside domain */
       font-weight: 700;
       color: #7b3e07;
     }
@@ -138,7 +133,7 @@
       font-size: 1.1em;
       word-break: break-word;
       overflow-wrap: break-word;
-      hyphens: none; /* prevent hyphenation */
+      hyphens: none;
     }
 
     .other-sites a:hover {
