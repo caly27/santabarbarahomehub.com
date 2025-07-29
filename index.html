@@ -41,11 +41,9 @@
       font-size: 3em;
       font-weight: 700;
       max-width: 100%;
-      /* Allow breaking inside long words */
       word-break: break-word;
       overflow-wrap: break-word;
-      hyphens: auto;
-      box-sizing: border-box;
+      /* no hyphens here to avoid weird breaks */
     }
 
     header p {
@@ -71,8 +69,18 @@
       max-width: 100%;
       word-break: break-word;
       overflow-wrap: break-word;
-      hyphens: auto;
-      box-sizing: border-box;
+      /* remove hyphens */
+      hyphens: none;
+    }
+
+    /* Special styling for domain text inside the section title */
+    .domain-text {
+      white-space: normal; /* allow wrapping */
+      word-break: break-word;
+      overflow-wrap: break-word;
+      hyphens: none; /* prevent hyphenation */
+      font-weight: 700;
+      color: #7b3e07;
     }
 
     .highlight-box {
@@ -130,7 +138,7 @@
       font-size: 1.1em;
       word-break: break-word;
       overflow-wrap: break-word;
-      hyphens: auto;
+      hyphens: none; /* prevent hyphenation */
     }
 
     .other-sites a:hover {
@@ -182,7 +190,7 @@
 
   <section>
     <h2 class="section-title">
-      Why Choose SantaBarbaraHomeHub.com?
+      Why Choose <span class="domain-text">SantaBarbaraHomeHub.com</span>?
     </h2>
     <div class="highlight-box">
       <p><strong>SantaBarbaraHomeHub.com</strong> connects buyers, renters, and investors with premier real estate deals in Santa Barbara. This SEO-optimized domain and platform help you reach the local market with ease and authority.</p>
