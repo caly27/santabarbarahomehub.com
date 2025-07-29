@@ -14,6 +14,11 @@
   <title>SantaBarbaraHomeHub.com — Real Estate Deals in Santa Barbara, CA</title>
 
   <style>
+    /* Reset box-sizing for easier padding management */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #fff8f0;
@@ -21,6 +26,7 @@
       padding: 0;
       color: #4b3b2b;
       line-height: 1.6;
+      overflow-x: hidden; /* prevent horizontal scroll */
     }
 
     header {
@@ -45,7 +51,7 @@
     section {
       max-width: 1000px;
       margin: 30px auto;
-      padding: 20px;
+      padding: 20px 20px;
     }
 
     .section-title {
@@ -54,6 +60,12 @@
       color: #a3530e;
       margin-bottom: 20px;
       font-weight: 700;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      padding: 0 10px;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .highlight-box {
@@ -133,6 +145,22 @@
 
     footer a:hover {
       text-decoration: underline;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .section-title {
+        font-size: 1.5em;
+        padding: 0 5px;
+      }
+
+      .highlight-box {
+        padding: 20px;
+      }
     }
   </style>
 </head>
